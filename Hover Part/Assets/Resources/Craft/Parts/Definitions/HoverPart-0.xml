@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Part name="Hover Part">
+  <PartType id="HoverPart-0" includeInBodyDrag="true" name="Hover Part" prefabPath="Assets/Resources/Craft/Parts/Prefabs/HoverPart-0.prefab" mass="25" price="1000" partCollisions="Default" defaultMaterials="0,1,2,3,4" subpartsSharePartStyle="false" stylesShareHeader="false">
+    <Modifiers>
+      <Config autoActivateIfNoStageOrActivationGroup="true" buoyancyBaseScale="1" buoyancyUserScale="1" centerOfMass="0,0,0" collisionDisconnectImpulse="1000" collisionDisconnectVelocity="15" collisionExplodeImpulse="2000" collisionExplodeVelocity="30" collisionVelocityMode="NormalOnly" dragScale="1" fuelLine="false" heatShield="0" includeInDrag="true" inertiaTensorBaseScale="1" inertiaTensorMin="0.05" inertiaTensorUserScale="1" massScale="1" maxDamage="100" maxTemperature="1500" partCollisionHandling="Default" partCollisionResponse="Default" partScale="1,1,1" raiseWaterEventsEvenIfNotBuoyant="false" stageActivationType="None" supportsActivation="true" thermalMassRatio="1" inspectorEnabled="true" partPropertiesEnabled="true" />
+      <InputController activationGroup="0" currentValue="0" ignorePartActivationState="false" input="Throttle" invert="false" invertOnMirror="false" invertType="Output" max="1" min="0" showActivationGroup="false" showInputAxis="true" showInvert="true" type="Standard" zeroOnDeactivate="true" inputId="Throttle" inspectorEnabled="true" partPropertiesEnabled="true" />
+      <HoverPart_ParticleHover emissionAngle="15" emissionRate="1000" emissionVelocity="50" magicForceMultiplier="200" inputId="Throttle" inspectorEnabled="true" partPropertiesEnabled="true" />
+    </Modifiers>
+    <AttachPoints>
+      <AttachPoint name="AttachPoint1" position="0,0,0" rotation="90,0,0" allowRotation="true" allowInvertedConnection="false" canReceive="true" canSeek="true" ignoreSurfaces="false" />
+    </AttachPoints>
+    <SubpartTypes>
+      <SubpartType index="0" xmlName="" displayName="Part" />
+    </SubpartTypes>
+  </PartType>
+  <DesignerParts>
+    <DesignerPart name="Hover Part" category="Gizmos" description="Uses magic particles to hover." order="10" showInDesigner="true" snapshotDistanceScaler="1" snapshotRotation="30,30,0">
+      <Assembly>
+        <Parts>
+          <Part id="1" partType="HoverPart-0" position="0,0,0" rotation="0,0,0">
+            <Config />
+            <InputController />
+            <HoverPart_ParticleHover />
+          </Part>
+        </Parts>
+      </Assembly>
+    </DesignerPart>
+  </DesignerParts>
+  <PartStyles>
+    <SubpartStyles subpartIndex="0">
+      <Style id="Default" displayName="Default" />
+    </SubpartStyles>
+  </PartStyles>
+</Part>
